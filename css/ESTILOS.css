@@ -1,0 +1,386 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    
+    /* uso grid para ordenar */
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 5fr 0.5fr;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer"
+    ;
+    /* le doy espacio */
+    /* grid-column-gap: 10px; */
+    grid-row-gap: 10px;
+
+}
+
+.header {
+    background-color: rgb(121, 152, 252);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    flex-wrap: wrap;
+    grid-area: header;
+
+}
+
+.logo {
+    width: 10%;
+}
+
+.titulos {
+    display: flex;
+    color: aliceblue;
+    font-family: cursive;
+    width: 40%;
+    align-items: center;
+}
+
+.header nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+
+}
+
+.header nav ul {
+    display: flex;
+    margin: 20px;
+
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: aliceblue;
+    margin: 0 1rem;
+
+}
+
+/* sacar puntitos */
+.nav ul li {
+    list-style-type: none;
+}
+/* MAIN HOME */
+.main_home
+{
+    grid-area: main;
+    height: 100vh;
+    background-color: rgb(215, 231, 250); 
+    display: grid;
+
+    grid-template-columns: 33,33% 33,33% 33,33%;
+    grid-template-rows: 18% 5% 25% 25% 25%;
+    grid-template-areas:
+    "banner banner banner"
+    "titulo_home titulo_home titulo_home"
+    "imagen_home1 imagen_home5 imagen_home4"
+    "imagen_home2 imagen_home5 imagen_home4"
+    "imagen_home3 imagen_home6 texto_home"
+    ;
+}
+#titulo_home
+{
+    display: flex;
+    grid-area: titulo_home;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(121, 152, 252);
+    width: 100%;
+
+}
+.imagen_home1
+{
+    display: flex;
+    grid-area: imagen_home1;
+    height: 30vh;
+    align-items:center;
+    justify-content: center;
+
+}
+.imagen_home2
+{
+    display: flex;
+    grid-area: imagen_home2;
+    height: 30vh;
+    align-items:center;
+    justify-content: center;
+}
+.imagen_home3
+{
+    display: flex;
+    grid-area: imagen_home3;
+    height: 30vh;
+    align-items:center;
+    justify-content: center;
+
+}
+.imagen_home4
+{
+    display: flex;
+    grid-area: imagen_home4;
+    height: 60vh;
+    align-items:center;
+    justify-content: center;
+
+}
+.imagen_home5
+{
+    display: flex;
+    grid-area: imagen_home5;
+    height: 60vh;
+    justify-content: center;
+    align-items: center;;
+
+}
+.imagen_home6
+{
+    display: flex;
+    grid-area: imagen_home6;
+    height: 30vh;
+    align-items:center;
+    justify-content: center;
+ 
+
+}
+.texto_home
+{
+    display:flex;
+    grid-area: texto_home;
+    align-items: center;
+    justify-content: center;
+    height: 30vh;
+}
+
+
+/* MAIN NOVEDADES */
+.seccion_novedades{
+    grid-area: main;
+    background-color: rgb(215, 231, 250);
+    /* como adentro adentro de mi MAIN hay filas y columnas pongo otro grid */
+    display: grid;
+
+    grid-template-columns: 1.5fr 3fr;
+    grid-template-rows: 28% 41% 30%;
+    grid-template-areas:
+        "banner banner banner"
+        "novedades novedades calendario"
+        "imagen imagen imagen";
+}
+
+.banner {
+  grid-area: banner;
+    width: 100%;
+    
+}
+
+/* MAIN CONTACTO */
+.seccion_contacto
+{
+    background-color: rgb(215, 231, 250); 
+    display:grid;
+    grid-template-columns:60% 40%;
+    grid-template-rows: 0.5 FR 5FR 0.5FR;
+    grid-template-areas: 
+    "batosformulario motivo_contacto"
+    "datosformulario motivo_contacto"
+    "mapa motivo_contacto";
+}
+.datosformulario
+{
+    grid-area: datosformulario;
+}
+.mapa {
+    display:flex;
+    grid-area: mapa;
+    align-items: center;
+    align-content: space-around;
+}
+.motivodecontacto
+{
+    margin-top: auto;
+    margin-block-end: auto;
+    grid-area: motivo_contacto;
+  
+}
+/* NOVEDADES */
+.calendario {
+    display: flex;
+    grid-area: calendario;
+    align-items:flex-start
+}
+
+.novedades {
+
+    grid-area: novedades;
+    align-items: center;
+    justify-content: center;
+    /* vamos a darle columnas dentro */
+    column-count: 3;
+    column-gap: 2rem;
+    column-rule: 2px solid #ccc;
+    padding: 1rem;
+
+}
+
+p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+h4
+{
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.imagen {
+
+    display: flex;
+    grid-area: imagen;
+    justify-content: center;
+    align-items:center;
+    justify-content: space-between;
+
+}
+/* GALERIA */
+.carrusel_contenedor
+{
+    width: 70%;
+    height: 40%;
+    /* para centrar sin usar flex */
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+
+.footer {
+    grid-area: footer;
+    background-color: rgb(121, 152, 252);
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        "texto_footer . redes_sociales"
+}
+
+.texto_footer
+
+    {
+    display: flex;
+    grid-area: texto_footer;
+    width: 80%;
+    align-items: center;
+
+}
+
+.redes_sociales {
+    display: flex;
+    justify-content: flex-end;
+    grid-area: redes_sociales;
+    width: 20%;
+    justify-content: space-between;
+
+}
+/* DESKTOP FIRST */
+@media screen and (max-width:1200px){
+    
+}
+/* PARA PASARLO A VISTA MOVIL. RESPONSIVE */
+@media screen and (max-width:320px)
+{
+    /* modifico grilla */
+    body 
+    {
+        height: 170vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 20vh 125vh 25vh;
+        grid-template-areas:
+        "header"
+        "main"
+        "footer"
+    ;
+
+    }
+    .main_home
+    {
+        width:100%;
+        height: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 3fr 1fr 1fr;
+        grid-template-areas:
+        "banner"
+        "titulo_home"
+        "imagen_home4 "
+        "imagen_home4 "
+        "texto_home"
+        ;
+    }
+  
+    .imagen_home3
+    {
+        display:none;
+    }
+    .imagen_home5
+    {
+        display:none;
+    }
+
+    .imagen_home1
+    {
+        display:none;
+    }
+    .imagen_home2
+    {
+        display:none;
+    }
+    .imagen_home6
+    {
+        display:none;
+    }
+
+    .footer 
+    {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "texto_footer texto_footer"
+            "redes_sociales"
+            ;
+    }
+
+    .redes_sociales{
+        display:grid;
+    }
+    
+/* RESPONSIVE NOVEDADES */
+.seccion_novedades{
+    width:100%;
+        height: 100%;
+    grid-template-columns: 1.5fr;
+    grid-template-rows: 28% 41% 30%;
+    grid-template-areas:
+        "banner banner banner"
+        "novedades novedades novedades"
+        "imagen imagen imagen";
+}
+.calendario
+{
+    display:none;
+}
+.imagen
+{
+    display:none;
+}
+   
+}
