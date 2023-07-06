@@ -331,7 +331,7 @@ h4 {
 @media screen and (max-width:1200px) {}
 
 /* PARA PASARLO A VISTA MOVIL. RESPONSIVE */
-@media screen and (max-width:320px) {
+@media screen and (max-width:480px) {
 
     /* modifico grilla */
     body {
